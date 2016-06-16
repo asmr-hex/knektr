@@ -6,7 +6,7 @@
   "scripts": {
     "build": "mkdir -p build && babel --presets es2015 src --out-dir build",
     "watch": "babel --presets es2015 --watch src --out-dir build",
-    "test" : "node_modules/.bin/mocha --reporter spec"
+    "test": "node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "author": "connor",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.10.1",
     "babel-core": "^6.1.2",
     "babel-loader": "^6.0.1",
     "chai": "^3.4.1",
