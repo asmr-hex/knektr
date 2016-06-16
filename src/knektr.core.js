@@ -65,6 +65,28 @@ export class KNEKTR{
     }
 
     /**
+     * set the default graph.
+     * @param TBD
+     */
+    defaultGraph(g=null) {
+	if (g == null) {
+	    /* nop. */
+	}
+	else if (typeof g == 'string') {
+	    /* ensure a graph exists with this name. */
+	    if (!this.graphs.has(g)) {
+		throw new Error(`Graph ${g} Does Not Exist`)
+	    }
+	    this.graphs.set('default', this.graphs.get(g))
+	}
+	else if (g instanceof graph) {
+	    this.graphs.set('default', g)
+	}
+
+	return this.graphs.get('default')
+    }
+
+    /**
      * add a node to the default graph.
      * @param TBD
      */
