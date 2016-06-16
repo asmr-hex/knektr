@@ -1,4 +1,4 @@
-#KNEKTR
+#KNEKTR [![Build Status](https://travis-ci.org/connorwalsh/knektr.svg?branch=master)](https://travis-ci.org/connorwalsh/knektr)
 Wouldn't it be nice to multiply realize your backend data model with your front 
 end API? 
 

@@ -4,7 +4,7 @@
   "description": "a JavaScript library for representing, visualizing, and operating on graphs.",
   "main": "./build/knektr.core.js",
   "scripts": {
-    "build": "babel --presets es2015 src --out-dir build",
+    "build": "mkdir -p build && babel --presets es2015 src --out-dir build",
     "watch": "babel --presets es2015 --watch src --out-dir build",
     "test" : "node_modules/.bin/mocha --reporter spec"
   },
