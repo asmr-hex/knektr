@@ -42,6 +42,14 @@ describe("building graphs",
 				 expect(knektr.graphs.has("scale-free")).to.be.true;
 			     });
 		      });
+	     describe("adding graphs by passing only a name",
+		      function (){
+			  it("incorporates graph into KNEKTR",
+			     function (){
+				 knektr.addGraph("cayley");
+				 expect(knektr.graphs.has("cayley")).to.be.true;
+			     });
+		      });
 	     describe("adding graphs with the same name", 
 		      function (){
 			  it("throws an error", 
@@ -51,6 +59,32 @@ describe("building graphs",
 				 try{ knektr.addGraph("erdos-renyi") }
 				 catch (e){ err = true; }
 				 expect(err).to.be.true;
+			     });
+		      });
+	     describe("setting a new default graph",
+		      function (){
+			  it("can return default graph when no args provided",
+			     function (){
+				 var g = knektr.defaultGraph()
+				 expect(g.name).to.be.equal("default");
+			     });
+			  it("can set the default using a valid name",
+			     function (){
+				 var g = knektr.defaultGraph("erdos-renyi")
+				 expect(g.name).to.be.equal("erdos-renyi");				 
+			     });
+			  it("can set the default using a valid graph",
+			     function (){
+				 var g = knektr.graphs.get("cayley");
+				 g = knektr.defaultGraph(g)
+				 expect(g.name).to.be.equal("cayley");				 
+			     });
+			  it("throws an error given invalid name",
+			     function (){
+				 var err = false
+				 try {knektr.defaultGraph("lagrange") }
+				 catch (e){ err = true; }
+				 expect(err).to.be.true;				 
 			     });
 		      });
 	     describe("deleting graphs", 
