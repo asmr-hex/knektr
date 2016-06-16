@@ -1,4 +1,4 @@
 language: node_js
 before_script:
-  - npm install || cat npm-debug.log
+  - npm list
   - npm run build
