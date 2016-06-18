@@ -1,4 +1,4 @@
-#KNEKTR [![Build Status](https://travis-ci.org/connorwalsh/knektr.svg?branch=master)](https://travis-ci.org/connorwalsh/knektr)
+#KNEKTR [![Build Status](https://travis-ci.org/connorwalsh/knektr.svg?branch=master)](https://travis-ci.org/connorwalsh/knektr) [![Coverage Status](https://coveralls.io/repos/github/connorwalsh/knektr/badge.svg?branch=setup-coveralls)](https://coveralls.io/github/connorwalsh/knektr?branch=setup-coveralls)
 Wouldn't it be nice to multiply realize your backend data model with your front 
 end API? 
 
